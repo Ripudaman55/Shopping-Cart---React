@@ -3,17 +3,19 @@ import { useEffect, useState } from "react";
 import React from "react";
 // import products from './data/products';
 
-const NoOfItems = 0;
+
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
   const [ListOfProducts, setProduct] = useState([]);
-
+  const [lastcart, setlastCart] = useState(cartItems)
   function addProduct(product){
     // Array list = cartItems;
-    
-    setCartItems()
-    NoOfItems++;
+    lastcart.push(product)
+    setlastCart(lastcart)
+    setCartItems(lastcart)
+    console.log('count', lastcart)
+    console.log('count', cartItems)
   }
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -37,7 +39,7 @@ function App() {
               className="App-logo"
               alt="logo"
             />
-            <span className="cart-items">{cartItems}</span>
+            <span className="cart-items">{cartItems.length}</span>
           </div>
         </div>
 
