@@ -2,37 +2,63 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-logo{
+  height: 5vmin;
+  /* pointer-events: none; */
+  /* align-items: end; */
+    
+  /* margin-left: 30px; */
+  margin-top: 30px;
+  /* margin-bottom: 30px; */
+  padding-left: 2%;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cart-logo {
+  /* height: 5vmin; */
+  /* pointer-events: none;
+  align-items: end; */
+  display: flex;
+    width: 100%;
+  /* margin: 30px; */
+  padding-left: 80%;
+  padding-top: 1%;
 }
+.App-logo:hover {
+  /* size: 2rem; */
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.cart-items {
+  display: flex;
+  width: 30px;
+  /* flex-direction: column;
+  align-items: center; */
+  /* justify-content: center; */
+  /* padding: 20px; */
+}
+
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #4d8196;
+  min-height: 10vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* flex-direction: grid; */
+  /* align-items: center;
+  justify-content: center; */
+  padding: 10px;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgba(255, 255, 255, 0.633);
+}
+
+.title{
+  
+  font-size: 2.85rem;
+  color: #fff;
+  margin: 30px ;
 }
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
