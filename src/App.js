@@ -1,20 +1,29 @@
-
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import React from "react";
+// import products from './data/products';
 
 const NoOfItems = 0;
 
 function App() {
-  const [cartItems, setCartItems] = useState(NoOfItems);
-  const addToCart = () => {
-    setCartItems(cartItems + 1);
-  };
-  const removeFromCart = () => {
-    if (cartItems > 0) {
-      setCartItems(cartItems - 1);
-    }
-  };
+  const [cartItems, setCartItems] = useState([]);
+  const [ListOfProducts, setProduct] = useState([]);
+
+  function addProduct(product){
+    // Array list = cartItems;
+    
+    setCartItems()
+    NoOfItems++;
+  }
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setProduct(data);
+      });
+  }, []);
+  // .then(data => setProduct(data));
   // setCartItems(NoOfItems);
 
   return (
@@ -30,20 +39,27 @@ function App() {
             />
             <span className="cart-items">{cartItems}</span>
           </div>
-          </div>
+        </div>
 
-
-
-          {/* <div className="App-content">
-            <div className="cart-items">
-              <button className="add-to-cart" onClick={addToCart}>
-                Add to Cart
-              </button>
-              <button className="remove-from-cart" onClick={removeFromCart}>
-                Remove from Cart
-              </button>
+        {/* <div className="list"> */}
+        <div className="listing">
+          {ListOfProducts?.map((product) => (
+            <div className="items1">
+              <img className="product-image" src={product.image} alt="item" />
+              <h4>{product.title}</h4> <h4>{product.category}</h4>
+              <h5>${product.price}</h5>
+              <h6>
+                {product.description.split(" ").length > 30
+                  ? product.description.split(" ").slice(0, 30).join(" ") +
+                    "..."
+                  : product.description}
+              </h6>
+              <button onClick={addProduct(product)}>Add to cart </button>
             </div>
-        </div> */}
+          ))}
+
+          {/* </div> */}
+        </div>
       </header>
     </div>
   );

@@ -1,17 +1,17 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  background-color: #c8c3c3;
 }
 
-.App-logo{
+.App-logo {
   height: 5vmin;
   /* pointer-events: none; */
   /* align-items: end; */
-    
+
   /* margin-left: 30px; */
   margin-top: 30px;
   /* margin-bottom: 30px; */
   padding-left: 2%;
-
 }
 
 .cart-logo {
@@ -19,7 +19,7 @@
   /* pointer-events: none;
   align-items: end; */
   display: flex;
-    width: 100%;
+  width: 100%;
   /* margin: 30px; */
   padding-left: 80%;
   padding-top: 1%;
@@ -39,7 +39,6 @@
   /* padding: 20px; */
 }
 
-
 .App-header {
   background-color: #4d8196;
   min-height: 10vh;
@@ -52,13 +51,84 @@
   color: rgba(255, 255, 255, 0.633);
 }
 
-.title{
-  
+.title {
   font-size: 2.85rem;
   color: #fff;
-  margin: 30px ;
+  margin: 30px;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.list {
+  /* display: flex; */
+  width: 100%;
+  /* height: 100%; */
+  /* height: fit-content; */
+  padding: 30px;
+}
+.listing {
+  /* width: 100%; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: flex-start;
+  padding: 2%;
+}
+.items1 {
+  flex: 1 1 35%; /* About 4 per row, responsive */
+  min-width: 680px; /* Minimum width for each card */
+  max-width: 24%; /* Prevents more than 4 per row */
+  box-sizing: border-box;
+  font-size: 2rem;
+  margin: 0;
+  background: #ffffff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 3px 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 750px; /* Fixed height for even cards */
+  justify-content: space-between;
+}
+
+.items1 img {
+  width: 100%;
+  height: 300px; /* Smaller, uniform image height */
+  object-fit: contain; /* Keep aspect ratio, no cropping */
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.items1 h4,
+.items1 h5,
+.items1 h6 {
+  margin: 6px 0;
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
+
+.items1 h6 {
+  font-size: 1rem;
+  color: #666;
+  min-height: 60px; /* Reserve space for description */
+  /* max-height: 70px; */
+  /* overflow: hidden; */
+}
+
+button {
+  background-color: #4d8196;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  align-self: center;
 }
