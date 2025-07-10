@@ -8,15 +8,15 @@ import React from "react";
 function App() {
   const [cartItems, setCartItems] = useState([]);
   const [ListOfProducts, setProduct] = useState([]);
-  const [lastcart, setlastCart] = useState(cartItems)
+  
+
   function addProduct(product){
     // Array list = cartItems;
-    lastcart.push(product)
-    setlastCart(lastcart)
-    setCartItems(lastcart)
-    console.log('count', lastcart)
-    console.log('count', cartItems)
+  
+    setCartItems([...cartItems, product])
+    // console.log('count', cartItems)
   }
+
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((response) => response.json())
@@ -56,7 +56,7 @@ function App() {
                     "..."
                   : product.description}
               </h6>
-              <button onClick={addProduct(product)}>Add to cart </button>
+              <button onClick={() => addProduct(product)}>Add to cart </button>
             </div>
           ))}
 
