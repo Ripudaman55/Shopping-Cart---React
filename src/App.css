@@ -9,7 +9,7 @@
   /* align-items: end; */
 
   /* margin-left: 30px; */
-  margin-top: 30px;
+  margin-top: 20px;
   /* margin-bottom: 30px; */
   padding-left: 2%;
 }
@@ -20,10 +20,16 @@
   align-items: end; */
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: flex-end;
+  padding-right:7vw;
   /* margin: 30px; */
-  padding-left: 80%;
-  padding-top: 1%;
+  /* padding-left: 78%; */
+  padding-top: 1vh;
 }
+
+
 .App-logo:hover {
   /* size: 2rem; */
   transform: scale(1.2);
@@ -33,6 +39,7 @@
 .cart-items {
   display: flex;
   width: 30px;
+  height: 50px;
   /* flex-direction: column;
   align-items: center; */
   /* justify-content: center; */
@@ -41,20 +48,23 @@
 
 .App-header {
   background-color: #4d8196;
-  min-height: 10vh;
+  min-height: 5vh;
   display: flex;
   /* flex-direction: grid; */
   /* align-items: center;
   justify-content: center; */
-  padding: 10px;
-  font-size: calc(10px + 2vmin);
+  padding: 5px;
+  padding-left: 2vw;
+  font-size: calc(5px + 2vmin);
   color: rgba(255, 255, 255, 0.633);
 }
 
 .title {
-  font-size: 2.85rem;
+  font-size: 1.5rem;
   color: #fff;
-  margin: 30px;
+  margin-left: 20vw;
+  margin: 10px;
+  padding: 0px;
 }
 
 .App-link {
@@ -66,38 +76,38 @@
   width: 100%;
   /* height: 100%; */
   /* height: fit-content; */
-  padding: 30px;
+  padding: 30vw;
 }
 .listing {
   /* width: 100%; */
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  justify-content: flex-start;
-  padding: 2%;
+  gap: 4vw;
+  justify-content: center;
+  padding: 2vw;
 }
 .items1 {
   flex: 1 1 35%; /* About 4 per row, responsive */
-  min-width: 680px; /* Minimum width for each card */
+  min-width: 400px; /* Minimum width for each card */
   max-width: 24%; /* Prevents more than 4 per row */
   box-sizing: border-box;
-  font-size: 2rem;
+  font-size: 1.2rem;
   margin: 0;
   background: #ffffff;
   color: #333;
   border-radius: 10px;
   box-shadow: 3px 4px 16px rgba(0, 0, 0, 0.08);
-  padding: 20px;
+  padding: 1vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 750px; /* Fixed height for even cards */
+  height: 500px; /* Fixed height for even cards */
   justify-content: space-between;
 }
 
 .items1 img {
   width: 100%;
-  height: 300px; /* Smaller, uniform image height */
+  height: 200px; /* Smaller, uniform image height */
   object-fit: contain; /* Keep aspect ratio, no cropping */
   border-radius: 8px;
   display: block;
@@ -107,14 +117,14 @@
 .items1 h4,
 .items1 h5,
 .items1 h6 {
-  margin: 6px 0;
+  margin: 2px 0;
   text-align: center;
   width: 100%;
   word-break: break-word;
 }
 
 .items1 h6 {
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: #666;
   min-height: 60px; /* Reserve space for description */
   /* max-height: 70px; */
@@ -131,4 +141,10 @@ button {
   font-size: 1.1rem;
   margin-top: 10px;
   align-self: center;
+}
+
+button:hover {
+  background-color: #24a7ed;
+  transform: scale(1.05);
+  transition: all 0.25s ease-in-out;
 }
